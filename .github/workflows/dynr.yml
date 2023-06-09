@@ -1,4 +1,4 @@
-name: Build dynr in ubuntu-22.04
+name: Build dynr in Ubuntu-22.04
 
 on:
   schedule:
