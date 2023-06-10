@@ -21,3 +21,5 @@ make clean install
 cd ..
 rm -rf dynr
 Rscript -e "demo('LinearSDE', package = 'dynr')"
+
+echo -e "\nInstall dynr, done!"
