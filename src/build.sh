@@ -2,7 +2,31 @@
 
 set -e
 
-Rscript -e "install.packages('RcppArmadillo', type = 'source')"
+# Makevars in the `arma` branch require the headers in `/usr/local/lib/R/library`
+
+Rscript -e "                                                                                   \
+    install.packages(                                                                          \
+        package = 'RcppArmadillo',                                                             \
+        repos = c(REPO_NAME = 'htps://packagemanager.rstudio.com/all/__linux__/jammy/latest'), \
+        lib = '/usr/local/lib/R/library'                                                       \
+    )                                                                                          \
+"
+
+# roxygen2
+
+Rscript -e "                                              \
+    remotes::install_version(                             \
+        package = 'roxygen2',                             \
+        version = '5.0.1',                                \
+        repos = c(CRAN = 'https://cran.rstudio.com')      \
+    )                                                     \
+"
+
+# tinytex
+
+Rscript -e "                                              \
+    try(tinytex::install_tinytex())                       \
+"
 
 # dynr master
 
