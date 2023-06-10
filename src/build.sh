@@ -2,13 +2,13 @@
 
 set -e
 
-# Makevars in the `arma` branch require the headers in `/usr/local/lib/R/library`
+# Makevars in the `arma` branch require the headers in file.path(Sys.getenv(\'R_HOME\'), \'library\')
 
 Rscript -e "                                                                                   \
     install.packages(                                                                          \
         'RcppArmadillo',                                                                       \
         repos = c(REPO_NAME = 'htps://packagemanager.rstudio.com/all/__linux__/jammy/latest'), \
-        lib = '/usr/local/lib/R/library'                                                       \
+        lib = file.path(Sys.getenv('R_HOME'), 'library')                                       \
     )                                                                                          \
 "
 
