@@ -2,6 +2,8 @@
 
 set -e
 
+Rscript -e "install.packages('RcppArmadillo', type = 'source')"
+
 # dynr master
 
 git clone https://github.com/mhunter1/dynr.git
