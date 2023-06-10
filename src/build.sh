@@ -6,7 +6,7 @@ set -e
 
 Rscript -e "                                                                                   \
     install.packages(                                                                          \
-        package = 'RcppArmadillo',                                                             \
+        'RcppArmadillo',                                                                       \
         repos = c(REPO_NAME = 'htps://packagemanager.rstudio.com/all/__linux__/jammy/latest'), \
         lib = '/usr/local/lib/R/library'                                                       \
     )                                                                                          \
