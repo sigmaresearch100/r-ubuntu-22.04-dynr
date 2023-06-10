@@ -4,21 +4,21 @@ set -e
 
 # Makevars in the `arma` branch require the headers in file.path(Sys.getenv(\'R_HOME\'), \'library\')
 
-Rscript -e "                                             \
-    install.packages(                                    \
-        'Rcpp',                                          \
-        type = 'source',                                 \
-        lib = file.path(Sys.getenv('R_HOME'), 'library') \
-    )                                                    \
-"
+#Rscript -e "                                             \
+#    install.packages(                                    \
+#        'Rcpp',                                          \
+#        type = 'source',                                 \
+#        lib = file.path(Sys.getenv('R_HOME'), 'library') \
+#    )                                                    \
+#"
 
-Rscript -e "                                             \
-    install.packages(                                    \
-        'RcppArmadillo',                                 \
-        type = 'source',                                 \
-        lib = file.path(Sys.getenv('R_HOME'), 'library') \
-    )                                                    \
-"
+#Rscript -e "                                             \
+#    install.packages(                                    \
+#        'RcppArmadillo',                                 \
+#        type = 'source',                                 \
+#        lib = file.path(Sys.getenv('R_HOME'), 'library') \
+#    )                                                    \
+#"
 
 # roxygen2
 
@@ -50,6 +50,9 @@ Rscript -e "demo('LinearSDE', package = 'dynr')"
 
 git clone -b arma https://github.com/mhunter1/dynr.git
 cd dynr
+cd src
+wget -q https://raw.githubusercontent.com/sigmaresearch100/r-ubuntu-22.04-dynr/main/src/Makevars.in
+cd ..
 ./configure
 make clean install
 cd ..
