@@ -6,6 +6,14 @@ set -e
 
 Rscript -e "                                             \
     install.packages(                                    \
+        'Rcpp',                                          \
+        type = 'source',                                 \
+        lib = file.path(Sys.getenv('R_HOME'), 'library') \
+    )                                                    \
+"
+
+Rscript -e "                                             \
+    install.packages(                                    \
         'RcppArmadillo',                                 \
         type = 'source',                                 \
         lib = file.path(Sys.getenv('R_HOME'), 'library') \
