@@ -15,5 +15,6 @@ sudo apt-get install -y    \
     libarpack2-dev         \
     libsuperlu-dev         \
     libgsl-dev             \
-    libarmadillo-dev
+    libarmadillo-dev       \
+    libeigen3-dev
  
