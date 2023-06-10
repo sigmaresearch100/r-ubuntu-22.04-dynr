@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 # dynr master
 
 git clone https://github.com/mhunter1/dynr.git
@@ -6,6 +10,7 @@ cd dynr
 make clean install
 cd ..
 rm -rf dynr
+Rscript -e "demo('LinearSDE', package = 'dynr')"
 
 # dynr arma
 
@@ -15,3 +20,4 @@ cd dynr
 make clean install
 cd ..
 rm -rf dynr
+Rscript -e "demo('LinearSDE', package = 'dynr')"
