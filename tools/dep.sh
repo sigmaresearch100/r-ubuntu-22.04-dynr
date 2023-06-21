@@ -17,4 +17,11 @@ apt-get install -y       \
     libgsl-dev           \
     libarmadillo-dev     \
     libeigen3-dev
+
+# freetype2
+apt-get install -y   \
+    libfreetype6-dev \
+    libpng-dev       \
+    libtiff5-dev     \
+    libjpeg-dev
  
