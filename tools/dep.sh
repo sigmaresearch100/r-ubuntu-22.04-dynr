@@ -24,4 +24,8 @@ apt-get install -y   \
     libpng-dev       \
     libtiff5-dev     \
     libjpeg-dev
+
+# git
+apt-get install -y \
+    git
  
