@@ -29,3 +29,6 @@ apt-get install -y   \
 apt-get install -y \
     git
  
+# dynr
+apt-get install -y \
+    libgsl-dev
