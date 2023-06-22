@@ -18,26 +18,43 @@ apt-get update
 #    libarmadillo-dev     \
 #    libeigen3-dev
 
-# freetype2
+# git
 apt-get install -y   \
-    libfreetype6-dev \
-    libpng-dev       \
-    libtiff5-dev     \
-    libjpeg-dev
+    git
 
 # curl
-apt-get install -y       \
+apt-get install -y   \
     libcurl4-openssl-dev
 
-# textshaping
-apt-get install -y   \
-    libharfbuzz-dev \
-    libfribidi-dev
+# freetype2
+apt-get install -y     \
+    libfontconfig1-dev \
+    libfreetype6-dev   \
+    libjpeg-dev        \
+    libpng-dev         \
+    libtiff5-dev
 
-# git
+# nloptr
 apt-get install -y \
-    git
- 
+    cmake
+
+# openssl
+apt-get install -y \
+    libssl-dev
+
+# systemfonts
+apt-get install -y \
+    libfontconfig1-dev
+
+# textshaping
+apt-get install -y  \
+    libfribidi-dev  \
+    libharfbuzz-dev
+
+# xml2
+apt-get install -y \
+    libxml2-dev
+
 # gsl
 apt-get install -y \
     libgsl-dev
