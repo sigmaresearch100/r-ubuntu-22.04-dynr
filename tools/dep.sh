@@ -25,10 +25,19 @@ apt-get install -y   \
     libtiff5-dev     \
     libjpeg-dev
 
+# curl
+apt-get install -y       \
+    libcurl4-openssl-dev
+
+# textshaping
+apt-get install -y   \
+    libharfbuzz-dev \
+    libfribidi-dev
+
 # git
 apt-get install -y \
     git
  
-# dynr
+# gsl
 apt-get install -y \
     libgsl-dev
