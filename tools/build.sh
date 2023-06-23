@@ -3,7 +3,6 @@
 set -e
 
 # roxygen2
-
 Rscript -e "                                              \
     remotes::install_version(                             \
         package = 'roxygen2',                             \
@@ -13,7 +12,6 @@ Rscript -e "                                              \
 "
 
 # tinytex
-
 Rscript -e "                                              \
     try(tinytex::install_tinytex())                       \
 "
@@ -25,5 +23,6 @@ make clean install
 cd ..
 rm -rf dynr
 Rscript -e "demo('LinearSDE', package = 'dynr')"
-
+rm LinearSDE.*
+rm Rplots.pdf
 echo -e "\nInstall dynr, done!"
