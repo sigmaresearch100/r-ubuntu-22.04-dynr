@@ -58,3 +58,8 @@ apt-get install -y \
 # gsl
 apt-get install -y \
     libgsl-dev
+
+# misc3d
+apt-get install -y \
+    tcl8.6-dev     \
+    tk8.6-dev

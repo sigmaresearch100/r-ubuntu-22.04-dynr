@@ -11,3 +11,5 @@ systemfonts,libfontconfig1-dev
 textshaping,libfribidi-dev
 textshaping,libharfbuzz-dev
 xml2,libxml2-dev
+misc3d,tcl8.6-dev
+misc3d,tk8.6-dev
